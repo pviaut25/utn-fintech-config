@@ -1,0 +1,2 @@
+# Configuración común para los servicios (sin secretos).
+# Las propiedades particulares están en los archivos por aplicación.
