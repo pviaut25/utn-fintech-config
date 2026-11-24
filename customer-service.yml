@@ -1,5 +1,6 @@
 server:
   port: 8081
+
 spring:
   datasource:
     url: ${CUSTOMER_DB_URL:jdbc:mysql://localhost:3307/fintech_customers?createDatabaseIfNotExist=true}
@@ -10,6 +11,7 @@ spring:
     hibernate:
       ddl-auto: update
     open-in-view: false
+
 app:
   jwt:
     secret: ${JWT_SECRET}
@@ -17,7 +19,8 @@ app:
   bootstrap-admin:
     username: ${ADMIN_USERNAME:admin}
     password: ${ADMIN_PASSWORD}
+
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
